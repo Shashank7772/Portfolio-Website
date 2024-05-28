@@ -1,0 +1,277 @@
+@font-face {
+    font-family: 'futura-heavy';
+    src: url(HeaviestDemi.ttf);
+}
+@font-face {
+    font-family: 'futura-medium';
+    src: url(MediumBook.ttf);
+}
+@font-face {
+    font-family: 'futura-light';
+    src: url(Light.ttf);
+}
+@font-face {
+    font-family: 'proxima-nova-thin';
+    src: url(Proxima\ Nova\ Thin.otf);
+}
+body
+{
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 75px;
+}
+#mainHeading
+{
+    color: #222;
+    font-family: 'futura-heavy';
+    font-size: 42px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin-bottom: 70px;
+}
+#about /*just the text About*/
+{
+    font-family: 'futura-light';
+    color: #222222;
+    font-size: 2em;
+    line-height: 1.5em;
+    letter-spacing: .06em;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.container { /*This is the container for my image and text beside it*/
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+/*From Here to */
+
+
+.image {
+    width: auto;
+    max-width: 256px;
+    height: auto;
+    margin-right: 40px;
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+
+#firstline
+{
+    margin-top: 0px;
+}
+
+.text {
+    max-width:auto;
+    align-self: flex-start;
+    flex-shrink: 1;
+    color: #222;
+    font-family: 'proxima-nova-thin';
+    font-size: 16px;
+    line-height: 1.8em;
+    font-weight: 500;
+}
+
+@media (max-width: 750px) {
+    .container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the top */
+    }
+
+    .image, .text {
+        max-width: 100%; /* Allow the image and text to take full width */
+        margin-right: 0; /* Remove the right margin */
+    }
+}
+/* Uptil here It was about me section */
+
+
+/* Now the line and projects section*/
+
+#lineBreak
+{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+#projects /*just the text projects*/
+{
+    font-family: 'futura-light';
+    color: #222222;
+    font-size: 2em;
+    line-height: 1.5em;
+    letter-spacing: .06em;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+/*The Styling for the projects section*/
+
+.portfolio
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item
+{
+    width: 48%;
+    box-sizing: border-box;
+}
+
+.item h2 {
+    color: #222;
+    font-family: 'futura-light';
+    font-size: 1.6em;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-align: start;
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.description p {
+    font-family: 'proxima-nova-thin';
+    font-size: 15px;
+    line-height: 1.8em;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.description a {
+    color: #008cba;
+    text-decoration: none;
+}
+
+.description a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 750px) {
+    .item {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+
+/*The GDSC Images and text section starts here */
+
+#talksText
+{
+    font-family: 'futura-light';
+    color: #2bb5bf;
+    font-size: 1.6em;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 70px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.GDSC
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between images */
+    box-sizing: border-box;
+    margin-bottom: 100px;
+}
+
+.GDSC img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 750px) {
+    .GDSC {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .GDSC img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*The GDSC Images and text section ends here */
+
+
+
+
+/*Contact me styling */
+#Contact
+{
+    font-family: 'futura-medium';
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 300;
+    color: #222;
+}
+
+
+
+/* Navbar Styling Starts here */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between icons */
+}
+
+.icon img {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    filter: contrast(1);
+    transition: filter 0.3s ease;
+}
+
+.icon:hover img {
+    filter: contrast(1); /* Brighten the hovered icon */
+}
+
+.navbar:hover .icon:not(:hover) img {
+    filter: contrast(0.1); /* Dim non-hovered icons when any icon is hovered */
+}
+
+
+/*Navbar styling ends here*/
+
+
+/*Footer styling starts here*/
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-content {
+    text-align: left;
+}
+
+.right-content {
+    text-align: right;
+}
+
+
+/*Footer styling ends here*/
+
